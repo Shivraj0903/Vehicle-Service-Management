@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>VEHICLE SERVICE MANAGEMENT</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>VEHICLE NUMBER</label>
+          <input type="text" placeholder="ENTER VEHICLE NUMBER" required />
+        </div>
+
+        <div class="input-box">
+          <label>INSURANCE ID</label>
+          <input type="text" placeholder="ENTER INSURANCE ID" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required />
+          </div>
+          <div class="input-box">
+            <label>SERVICE DATE</label>
+            <input type="date" placeholder="Enter birth date" required />
+          </div>
+        </div>
+        <div class="gender-box"></div>
+          
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>BILL AMOUNT</label>
+          <input type="text" placeholder="ENTER BILL AMOUNT" required />
+          <label>BILL NUMBER</label>
+          <input type="text" placeholder="Enter BILL NUMBER" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>SERVICE AVAILED</option>
+                <option>OIL CHANGE</option>
+                <option>BRAKE REPAIR</option>
+                <option>ENGINE TUNING</option>
+                <option>SUSPENSION REPAIR</option>
+                <option>TRANSMISSION REPAIR</option>
+                <option>EXHAUST SYSTEM REPAIR</option>
+                <option>WHEEL ALIGNMENT</option>
+                <option>BATTERY REPAIR</option>
+              </select>
+            </div>
+            <input type="text" placeholder="ENTER ADITIONAL SERVICE AVAILED" required />
+          </div>
+          <label>ADDRESS</label>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required />
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+    <script>
+      document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+    
+        // Store form data in session storage
+        sessionStorage.setItem('vehicleNumber', document.querySelector('input[placeholder="ENTER VEHICLE NUMBER"]').value);
+        sessionStorage.setItem('insuranceId', document.querySelector('input[placeholder="ENTER INSURANCE ID"]').value);
+        sessionStorage.setItem('phoneNumber', document.querySelector('input[placeholder="Enter phone number"]').value);
+        sessionStorage.setItem('serviceDate', document.querySelector('input[type="date"]').value);
+        sessionStorage.setItem('billAmount', document.querySelector('input[placeholder="ENTER BILL AMOUNT"]').value);
+        sessionStorage.setItem('billNumber', document.querySelector('input[placeholder="Enter BILL NUMBER"]').value);
+        sessionStorage.setItem('serviceAvailed', document.querySelector('select').value);
+        sessionStorage.setItem('additionalServices', document.querySelector('input[placeholder="ENTER ADITIONAL SERVICE AVAILED"]').value);
+        sessionStorage.setItem('address', document.querySelector('input[placeholder="Enter your region"]').value);
+        sessionStorage.setItem('postalCode', document.querySelector('input[placeholder="Enter postal code"]').value);
+    
+        // Redirect to the display page
+        window.location.href = "display.html"; // Make sure the file name matches
+      });
+    </script>
+    
+  </body>
+</html>

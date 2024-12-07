@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Submitted Vehicle Service Information</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      .table-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table, th, td {
+        border: 1px solid #ddd;
+      }
+      th, td {
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .back-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <h2>Submitted Vehicle Service Information</h2>
+      <table id="serviceTable">
+        <tr>
+          <th>Field</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Vehicle Number</td>
+          <td id="vehicleNumber"></td>
+        </tr>
+        <tr>
+          <td>Insurance ID</td>
+          <td id="insuranceId"></td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td id="phoneNumber"></td>
+        </tr>
+        <tr>
+          <td>Service Date</td>
+          <td id="serviceDate"></td>
+        </tr>
+        <tr>
+          <td>Bill Amount</td>
+          <td id="billAmount"></td>
+        </tr>
+        <tr>
+          <td>Bill Number</td>
+          <td id="billNumber"></td>
+        </tr>
+        <tr>
+          <td>Service Availed</td>
+          <td id="serviceAvailed"></td>
+        </tr>
+        <tr>
+          <td>Additional Services</td>
+          <td id="additionalServices"></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td id="address"></td>
+        </tr>
+        <tr>
+          <td>Postal Code</td>
+          <td id="postalCode"></td>
+        </tr>
+      </table>
+      <a href="index.html" class="back-button">Back to Form</a>
+    </div>
+
+    <script>
+      // Get data from session storage and display in the table
+      document.getElementById('vehicleNumber').innerText = sessionStorage.getItem('vehicleNumber');
+      document.getElementById('insuranceId').innerText = sessionStorage.getItem('insuranceId');
+      document.getElementById('phoneNumber').innerText = sessionStorage.getItem('phoneNumber');
+      document.getElementById('serviceDate').innerText = sessionStorage.getItem('serviceDate');
+      document.getElementById('billAmount').innerText = sessionStorage.getItem('billAmount');
+      document.getElementById('billNumber').innerText = sessionStorage.getItem('billNumber');
+      document.getElementById('serviceAvailed').innerText = sessionStorage.getItem('serviceAvailed');
+      document.getElementById('additionalServices').innerText = sessionStorage.getItem('additionalServices');
+      document.getElementById('address').innerText = sessionStorage.getItem('address');
+      document.getElementById('postalCode').innerText = sessionStorage.getItem('postalCode');
+    </script>
+  </body>
+</html>
